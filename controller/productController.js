@@ -174,5 +174,12 @@ export async function getProductById(req,res){
         }
 }
 export async function searchProducts(req,res){
+    try{}catch(error){
+        res.status(500).json({
+            
+            message:"failed to search products",error:error
+        })
+    }
+
     
 }
